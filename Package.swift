@@ -14,7 +14,6 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "WWPrint", dependencies: []),
-        .testTarget(name: "WWPrintTests", dependencies: ["WWPrint"]),
     ],
     swiftLanguageVersions: [
         .v5
