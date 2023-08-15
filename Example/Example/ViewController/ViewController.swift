@@ -15,9 +15,16 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         
         let message = wwMessage("iOS好棒棒")
-        print(message)
+        let logger = WWLogger.build()
         
+        print(message)
         wwPrint("Hello World!!!")
+        
+        logger?.message("debug", level: .debug)
+        logger?.message("info", level: .info)
+        logger?.message("notice", level: .notice)
+        logger?.message("warning", level: .warning)
+        logger?.message("critical", level: .critical)
     }
 }
 
