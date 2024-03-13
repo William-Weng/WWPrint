@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -13,7 +13,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "WWPrint", dependencies: []),
+        .target(name: "WWPrint", resources: [.copy("Privacy")]),
     ],
     swiftLanguageVersions: [
         .v5

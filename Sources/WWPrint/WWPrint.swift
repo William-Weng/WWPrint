@@ -47,7 +47,7 @@ public func wwFatalError<T>(_ message: T, file: StaticString = #file, line: UInt
 ///   - message: 訊息文字
 ///   - file: 檔案名稱
 ///   - line: 所在行數
-public func wwAssert(_ condition: @autoclosure () -> Bool, _ message: @autoclosure () -> String = String(), file: StaticString = #file, line: UInt = #line) {
+public func wwAssert(_ condition: @autoclosure () -> Bool, message: @autoclosure () -> String = String(), file: StaticString = #file, line: UInt = #line) {
     let newMessage = "🚷 \(message())"
     Swift.assert(condition(), newMessage, file: file, line: line)
 }
@@ -68,7 +68,7 @@ public func wwAssertionFailure(_ message: @autoclosure () -> String = String(), 
 ///   - message: 訊息文字
 ///   - file: 檔案名稱
 ///   - line: 所在行數
-public func wwPrecondition(_ condition: @autoclosure () -> Bool, _ message: @autoclosure () -> String = String(), file: StaticString = #file, line: UInt = #line) {
+public func wwPrecondition(_ condition: @autoclosure () -> Bool, message: @autoclosure () -> String = String(), file: StaticString = #file, line: UInt = #line) {
     let newMessage = "🔞 \(message())"
     Swift.precondition(condition(), newMessage, file: file, line: line)
 }
